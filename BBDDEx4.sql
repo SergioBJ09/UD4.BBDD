@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema Ex4
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema Ex4
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `Ex4` ;
+USE `Ex4` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Cliente`
+-- Table `Ex4`.`Cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Cliente` (
+CREATE TABLE IF NOT EXISTS `Ex4`.`Cliente` (
   `DNI` VARCHAR(10) NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
   `Apellido` VARCHAR(45) NOT NULL,
@@ -30,9 +30,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Tipo Poliza`
+-- Table `Ex4`.`TipoPoliza`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Tipo Poliza` (
+CREATE TABLE IF NOT EXISTS `Ex4`.`TipoPoliza` (
   `ID` INT NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(45) NOT NULL,
   `Descripcion` VARCHAR(45) NOT NULL,
@@ -42,9 +42,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Vendedor`
+-- Table `Ex4`.`Vendedor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Vendedor` (
+CREATE TABLE IF NOT EXISTS `Ex4`.`Vendedor` (
   `DNI` VARCHAR(10) NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
   `Apellido` VARCHAR(45) NOT NULL,
@@ -57,9 +57,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Poliza`
+-- Table `Ex4`.`Poliza`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Poliza` (
+CREATE TABLE IF NOT EXISTS `Ex4`.`Poliza` (
   `Nº Poliza` VARCHAR(45) NOT NULL,
   `Cliente_DNI` VARCHAR(10) NOT NULL,
   `Importe` VARCHAR(45) NOT NULL,
@@ -75,17 +75,17 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Poliza` (
   INDEX `fk_Poliza_Vendedor1_idx` (`Vendedor_DNI` ASC) VISIBLE,
   CONSTRAINT `fk_Poliza_Cliente`
     FOREIGN KEY (`Cliente_DNI`)
-    REFERENCES `mydb`.`Cliente` (`DNI`)
+    REFERENCES `Ex4`.`Cliente` (`DNI`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Poliza_Tipo Poliza1`
     FOREIGN KEY (`Tipo Poliza_ID`)
-    REFERENCES `mydb`.`Tipo Poliza` (`ID`)
+    REFERENCES `Ex4`.`TipoPoliza` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Poliza_Vendedor1`
     FOREIGN KEY (`Vendedor_DNI`)
-    REFERENCES `mydb`.`Vendedor` (`DNI`)
+    REFERENCES `Ex4`.`Vendedor` (`DNI`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
