@@ -1,0 +1,5 @@
+ID,Descripción_Producto,Unidades_Descuento,Precio_Total,Precio_Unitario_IVA,Producto_Codigo_Interno,Ticket_ID
+1,Detergente,2,"15,4€","1,4€",1,1
+2,"Pienso de Conejo",2,11€,1€,2,2
+3,"1Kg Patatas",5,"6,5€","0,5€",3,3
+4,"Botella Vino",3,"24,1€","2,2€",4,4

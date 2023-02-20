@@ -1,0 +1,5 @@
+ID,Avión_ID,Origen,Destino,Dia_Salida,Hora_Salida
+1,1,Madrid,Menorca,19/02/2023,6:30
+2,2,Barcelona,Madrid,20/02/2023,10:00
+3,3,"Palma de Mallorca",Valencia,25/02/2023,19:30
+4,4,"Las Palmas",Madrid,3/03/2023,21:45
