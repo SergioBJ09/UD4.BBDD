@@ -1,0 +1,5 @@
+SELECT InsertPolizaEx4,InsertTipoPolizaEx4.nombre,InsertClienteEx4.dni,InsertClienteEx4.nombre,InsertClienteEx4.apellidos
+FROM InsertPolizaEx4,InsertClienteEx4,InsertTipoPolizaEx4
+WHERE InsertClienteEx4.dni=InsertPolizaEx4.dni_cliente
+and InsertPolizaEx4.id_InsertTipoPolizaEx4=InsertTipoPolizaEx4.id
+and InsertTipoPolizaEx4.nombre="Viaje";

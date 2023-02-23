@@ -1,0 +1,6 @@
+SELECT InsertTicketEx7.Nº_Factura,InsertTicketEx7.Fecha,InsertTicketEx7.Hora,InsertEmpleadoEx7.Nombre,suma(InsertLineaTicketEx7.Precio_Unitario_IVA)
+FROM InsertTicketEx7,InsertEmpleadoEx7,InsertLineaTicketEx7,InsertProductoEx7
+WHERE InsertTicketEx7.Empleado_DNI=InsertEmpleadoEx7.DNI
+and InsertTicketEx7.ID=InsertLineaTicketEx7.Ticket_ID
+and InsertProductoEx7.Codigo_Interno=InsertLineaTicketEx7.Producto_Codigo_Interno
+and InsertProductoEx7.Codigo_Barras="41981651984165198611"

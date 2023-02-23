@@ -1,0 +1,5 @@
+SELECT InsertPajaeroEx6.dni,InsertPasajeroEx6.nombre,InsertPasajeroEx6.apellidos, InsertVueloEx6.id,InsertVueloEx6.origen,InsertVueloEx6.destino,InsertReservaEx6.importe
+FROM InsertPasajeroEx6,InsertReservaEx6,InsertVueloEx6
+WHERE InsertPasajeroEx6.dni=InsertReservaEx6.dni_pasajero
+and InsertReservaEx6.id_vuelo=InsertVueloEx6.id
+and InsertReservaEx6.id="6";
